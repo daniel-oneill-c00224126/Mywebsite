@@ -100,23 +100,6 @@ footer {
     color: #64748b;
     font-size: 0.9rem;
 }
-/* Hobbies Section Styling */
-.hobbies-list {
-    list-style: none; /* Removes standard bullet points */
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.hobbies-list li {
-    background-color: #f1f5f9;
-    color: #334155;
-    padding: 10px 16px;
-    border-left: 4px solid #38bdf8; /* Adds a colorful accent bar on the left */
-    border-radius: 4px;
-    font-weight: 500;
-}
 /* Interactive Hobby Dropdowns */
 .hobbies-list {
     display: flex;
@@ -127,25 +110,27 @@ footer {
 .hobby-item {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid #38bdf8; /* Blue highlight bar */
+    border-left: 4px solid #38bdf8;
     border-radius: 6px;
     overflow: hidden;
     transition: background-color 0.2s ease;
 }
 
-/* Header/Clickable Title */
 .hobby-item summary {
     padding: 12px 16px;
     font-weight: 600;
     color: #1e293b;
     cursor: pointer;
-    list-style: none; /* Removes default arrow in some browsers */
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Custom indicator arrow */
+.hobby-item summary::-webkit-details-marker {
+    display: none; /* Hides default Chrome/Safari arrow */
+}
+
 .hobby-item summary::after {
     content: '▶';
     font-size: 0.75rem;
@@ -153,12 +138,10 @@ footer {
     transition: transform 0.2s ease;
 }
 
-/* Rotate arrow when opened */
 .hobby-item[open] summary::after {
     transform: rotate(90deg);
 }
 
-/* Revealed text content */
 .hobby-item p {
     padding: 0 16px 14px 16px;
     margin-top: 4px;
